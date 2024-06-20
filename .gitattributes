@@ -1,0 +1,16 @@
+# Handle line endings automatically for files detected as text
+* text=auto
+
+# Declare files that will always have LF line endings on checkout
+*.js text eol=lf
+*.json text eol=lf
+*.pug text eol=lf
+*.css text eol=lf
+*.html text eol=lf
+*.md text eol=lf
+
+# Specific configurations for files
+*.svg binary
+*.png binary
+*.jpg binary
+*.jpeg binary
