@@ -7,7 +7,7 @@ export const bookTour = async (tourId) => {
 
     // 從 API 獲取結帳會話
     const session = await axios.get(
-      `http://127.0.0.1:3000/api/v1/bookings/checkout-session/${tourId}`,
+      `/api/v1/bookings/checkout-session/${tourId}`,
     );
 
     // console.log(session);

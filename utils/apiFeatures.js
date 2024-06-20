@@ -6,10 +6,10 @@ class APIFeatures {
 
   filter() {
     const queryObj = { ...this.queryString };
-    console.log('Original Query Object:', queryObj); // 添加日志
+    // console.log('Original Query Object:', queryObj); // 添加日志
     const excludedFields = ['page', 'sort', 'limit', 'fields'];
     excludedFields.forEach((el) => delete queryObj[el]);
-    console.log('Filtered Query Object:', queryObj); // 添加日志
+    // console.log('Filtered Query Object:', queryObj); // 添加日志
     let queryStr = JSON.stringify(queryObj);
     queryStr = queryStr.replace(/\b(gte|gt|lte|lt)\b/g, (match) => `$${match}`);
 

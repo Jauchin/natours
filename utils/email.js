@@ -14,7 +14,7 @@ module.exports = class Email {
 
   newTransport() {
     const env = (process.env.NODE_ENV || '').trim();
-    console.log('Node Environment:', env);
+    // console.log('Node Environment:', env);
 
     if (env === 'production') {
       //Sendgrid
@@ -27,8 +27,7 @@ module.exports = class Email {
       });
     }
 
-    console.log(process.env.NODE_ENV);
-    console.log('dfdfdf');
+    // console.log(process.env.NODE_ENV);
 
     return nodemailer.createTransport({
       host: process.env.EMAIL_HOST,

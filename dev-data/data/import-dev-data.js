@@ -35,11 +35,11 @@ const importData = async () => {
     await Tour.create(tours);
     await User.create(users, { validateBeforeSave: false });
     await Review.create(reviews);
-    console.log('Data successfully loaded!');
+    // console.log('Data successfully loaded!');
 
     // 检查数据库中的数据
     const loadedTours = await Tour.find();
-    console.log('Tours after import:', loadedTours);
+    // console.log('Tours after import:', loadedTours);
   } catch (err) {
     console.error('Error loading data:', err);
   }
@@ -52,16 +52,16 @@ const deleteData = async () => {
     await Tour.deleteMany();
     await User.deleteMany();
     await Review.deleteMany();
-    console.log('Data successfully deleted!');
+    // console.log('Data successfully deleted!');
     const remainingTours = await Tour.find();
-    console.log('Remaining Tours after delete:', remainingTours);
+    // console.log('Remaining Tours after delete:', remainingTours);
   } catch (err) {
     console.error('Error deleting data:', err);
   }
   process.exit();
 };
 
-console.log('Command argument:', process.argv[2]);
+// console.log('Command argument:', process.argv[2]);
 if (process.argv[2] === '--import') {
   importData();
 } else if (process.argv[2] === '--delete') {

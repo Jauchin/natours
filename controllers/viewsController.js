@@ -41,7 +41,7 @@ exports.getLoginForm = catchAsync(async (req, res) => {
 });
 
 exports.getAccount = (req, res) => {
-  console.log(res);
+  // console.log(res);
   // console.log(user.photo);
   res.status(200).render('account', {
     title: 'Your account',
